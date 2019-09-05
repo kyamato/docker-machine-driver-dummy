@@ -10,7 +10,7 @@ import:
   - libmachine/mcnflag
   - libmachine/mcnutils
   - libmachine/state
-- package: github.com/kyamato/generic
+- package: github.com/kyamato/docker-machine-driver-generic
 testImport:
 - package: github.com/stretchr/testify
   version: ^1.4.0
