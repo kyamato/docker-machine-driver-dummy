@@ -1,0 +1,18 @@
+package: github.com/kyamato/docker-machine-driver-generic
+import:
+- package: github.com/docker/machine
+  version: ^0.16.2
+  subpackages:
+  - libmachine/drivers
+  - libmachine/drivers/plugin
+  - libmachine/engine
+  - libmachine/log
+  - libmachine/mcnflag
+  - libmachine/mcnutils
+  - libmachine/state
+- package: github.com/kyamato/generic
+testImport:
+- package: github.com/stretchr/testify
+  version: ^1.4.0
+  subpackages:
+  - assert
