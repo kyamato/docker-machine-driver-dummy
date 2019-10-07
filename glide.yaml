@@ -1,4 +1,4 @@
-package: github.com/kyamato/docker-machine-driver-generic
+package: github.com/kyamato/docker-machine-driver-dummy
 import:
 - package: github.com/docker/machine
   subpackages:

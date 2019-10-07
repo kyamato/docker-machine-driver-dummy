@@ -1,4 +1,4 @@
-package generic
+package dummy
 
 import (
 	"errors"
@@ -32,30 +32,30 @@ const (
 func (d *Driver) GetCreateFlags() []mcnflag.Flag {
 	return []mcnflag.Flag{
 		mcnflag.IntFlag{
-			Name:   "generic-engine-port",
+			Name:   "dummy-engine-port",
 			Usage:  "Docker engine port",
 			Value:  engine.DefaultPort,
 			EnvVar: "GENERIC_ENGINE_PORT",
 		},
 		mcnflag.StringFlag{
-			Name:   "generic-ip-address",
+			Name:   "dummy-ip-address",
 			Usage:  "IP Address of machine",
 			EnvVar: "GENERIC_IP_ADDRESS",
 		},
 		mcnflag.StringFlag{
-			Name:   "generic-ssh-user",
+			Name:   "dummy-ssh-user",
 			Usage:  "SSH user",
 			Value:  drivers.DefaultSSHUser,
 			EnvVar: "GENERIC_SSH_USER",
 		},
 		mcnflag.StringFlag{
-			Name:   "generic-ssh-key",
+			Name:   "dummy-ssh-key",
 			Usage:  "SSH private key path (if not provided, default SSH key will be used)",
 			Value:  "",
 			EnvVar: "GENERIC_SSH_KEY",
 		},
 		mcnflag.IntFlag{
-			Name:   "generic-ssh-port",
+			Name:   "dummy-ssh-port",
 			Usage:  "SSH port",
 			Value:  drivers.DefaultSSHPort,
 			EnvVar: "GENERIC_SSH_PORT",
@@ -76,7 +76,7 @@ func NewDriver(hostName, storePath string) drivers.Driver {
 
 // DriverName returns the name of the driver
 func (d *Driver) DriverName() string {
-	return "idcf-generic"
+	return "idcf-dummy"
 }
 
 func (d *Driver) GetSSHHostname() (string, error) {
@@ -92,14 +92,14 @@ func (d *Driver) GetSSHKeyPath() string {
 }
 
 func (d *Driver) SetConfigFromFlags(flags drivers.DriverOptions) error {
-	d.EnginePort = flags.Int("generic-engine-port")
-	d.IPAddress = flags.String("generic-ip-address")
-	d.SSHUser = flags.String("generic-ssh-user")
-	d.SSHKey = flags.String("generic-ssh-key")
-	d.SSHPort = flags.Int("generic-ssh-port")
+	d.EnginePort = flags.Int("dummy-engine-port")
+	d.IPAddress = flags.String("dummy-ip-address")
+	d.SSHUser = flags.String("dummy-ssh-user")
+	d.SSHKey = flags.String("dummy-ssh-key")
+	d.SSHPort = flags.Int("dummy-ssh-port")
 
 	if d.IPAddress == "" {
-		return errors.New("generic driver requires the --generic-ip-address option")
+		return errors.New("dummy driver requires the --dummy-ip-address option")
 	}
 
 	return nil
@@ -163,11 +163,11 @@ func (d *Driver) GetState() (state.State, error) {
 }
 
 func (d *Driver) Start() error {
-	return errors.New("generic driver does not support start")
+	return errors.New("dummy driver does not support start")
 }
 
 func (d *Driver) Stop() error {
-	return errors.New("generic driver does not support stop")
+	return errors.New("dummy driver does not support stop")
 }
 
 func (d *Driver) Restart() error {
@@ -176,7 +176,7 @@ func (d *Driver) Restart() error {
 }
 
 func (d *Driver) Kill() error {
-	return errors.New("generic driver does not support kill")
+	return errors.New("dummy driver does not support kill")
 }
 
 func (d *Driver) Remove() error {

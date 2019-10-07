@@ -1,2 +1,2 @@
 #README
-# docker-machine-driver-generic
+# docker-machine-driver-dummy

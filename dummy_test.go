@@ -1,4 +1,4 @@
-package generic
+package dummy
 
 import (
 	"testing"
@@ -12,9 +12,9 @@ func TestSetConfigFromFlags(t *testing.T) {
 
 	checkFlags := &drivers.CheckDriverOptions{
 		FlagsValues: map[string]interface{}{
-			"generic-engine-port": "3000",
-			"generic-ip-address":  "localhost",
-			"generic-ssh-key":     "path",
+			"dummy-engine-port": "3000",
+			"dummy-ip-address":  "localhost",
+			"dummy-ssh-key":     "path",
 		},
 		CreateFlags: driver.GetCreateFlags(),
 	}
