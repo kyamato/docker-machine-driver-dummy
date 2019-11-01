@@ -1,0 +1,63 @@
+hash: 8b2f5a181bd3009de5872d99a4ab8fc3a712c24fee7339a97127bc7e5058ccf2
+updated: 2019-11-01T18:29:36.145347574+09:00
+imports:
+- name: github.com/Azure/go-ansiterm
+  version: d6e3b3328b783f23731bc4d058875b0371ff8109
+  subpackages:
+  - winterm
+- name: github.com/docker/docker
+  version: 64fd3dc0d5e0b15246dcf8d2a58baf202cc179bc
+  subpackages:
+  - pkg/term
+  - pkg/term/windows
+- name: github.com/docker/machine
+  version: bd45ab13d88c32a3dd701485983354514abc41fa
+  subpackages:
+  - libmachine/drivers
+  - libmachine/drivers/plugin
+  - libmachine/drivers/plugin/localbinary
+  - libmachine/drivers/rpc
+  - libmachine/engine
+  - libmachine/log
+  - libmachine/mcnflag
+  - libmachine/mcnutils
+  - libmachine/ssh
+  - libmachine/state
+  - libmachine/version
+  - version
+- name: github.com/konsorten/go-windows-terminal-sequences
+  version: f55edac94c9bbba5d6182a4be46d86a2c9b5b50e
+- name: github.com/sirupsen/logrus
+  version: 67a7fdcf741f4d5cee82cb9800994ccfd4393ad0
+- name: golang.org/x/crypto
+  version: 8986dd9e96cf0a6f74da406c005ba3df38527c04
+  subpackages:
+  - curve25519
+  - ed25519
+  - ed25519/internal/edwards25519
+  - internal/chacha20
+  - internal/subtle
+  - poly1305
+  - ssh
+  - ssh/terminal
+- name: golang.org/x/sys
+  version: f43be2a4598cf3a47be9f94f0c28197ed9eae611
+  subpackages:
+  - cpu
+  - unix
+  - windows
+testImports:
+- name: github.com/davecgh/go-spew
+  version: d8f796af33cc11cb798c1aaeb27a4ebc5099927d
+  subpackages:
+  - spew
+- name: github.com/pmezard/go-difflib
+  version: 5d4384ee4fb2527b0a1256a821ebfc92f91efefc
+  subpackages:
+  - difflib
+- name: github.com/stretchr/testify
+  version: 221dbe5ed46703ee255b1da0dec05086f5035f62
+  subpackages:
+  - assert
+- name: gopkg.in/yaml.v2
+  version: f221b8435cfb71e54062f6c6e99e9ade30b124d5

@@ -1,4 +1,4 @@
-package idcfnative
+package dummy
 
 import (
 	"errors"

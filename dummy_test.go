@@ -12,9 +12,9 @@ func TestSetConfigFromFlags(t *testing.T) {
 
 	checkFlags := &drivers.CheckDriverOptions{
 		FlagsValues: map[string]interface{}{
-			"dummy-engine-port": "3000",
-			"dummy-ip-address":  "localhost",
-			"dummy-ssh-key":     "path",
+			"idcfnative-engine-port": "3000",
+			"idcfnative-ip-address":  "localhost",
+			"idcfnative-ssh-key":     "path",
 		},
 		CreateFlags: driver.GetCreateFlags(),
 	}
