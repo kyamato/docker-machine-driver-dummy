@@ -38,11 +38,11 @@ func (d *Driver) GetCreateFlags() []mcnflag.Flag {
 //			Value:  engine.DefaultPort,
 //			EnvVar: "GENERIC_ENGINE_PORT",
 //		},
-		mcnflag.StringFlag{
-			Name:   "dummy-ip-address",
-			Usage:  "IP Address of machine",
-			EnvVar: "GENERIC_IP_ADDRESS",
-		},
+//		mcnflag.StringFlag{
+//			Name:   "dummy-ip-address",
+//			Usage:  "IP Address of machine",
+//			EnvVar: "GENERIC_IP_ADDRESS",
+//		},
 //		mcnflag.StringFlag{
 //			Name:   "dummy-ssh-user",
 //			Usage:  "SSH user",
@@ -111,9 +111,9 @@ func (d *Driver) SetConfigFromFlags(flags drivers.DriverOptions) error {
 	d.SSHPort = 22
 
 	log.Info("func SetConfigFromFlags()")
-	if d.IPAddress == "" {
-		return errors.New("dummy driver requires the --dummy-ip-address option")
-	}
+//	if d.IPAddress == "" {
+//		return errors.New("dummy driver requires the --dummy-ip-address option")
+//	}
 
 	return nil
 }
