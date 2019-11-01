@@ -1,4 +1,4 @@
-package dummy
+package idcfnative
 
 import (
 	"errors"
@@ -24,7 +24,7 @@ type Driver struct {
 }
 
 const (
-	driverName = "dummy"
+	driverName = "idcfnative"
 	defaultTimeout = 15 * time.Second
 )
 
@@ -38,11 +38,11 @@ func (d *Driver) GetCreateFlags() []mcnflag.Flag {
 //			Value:  engine.DefaultPort,
 //			EnvVar: "GENERIC_ENGINE_PORT",
 //		},
-//		mcnflag.StringFlag{
-//			Name:   "dummy-ip-address",
-//			Usage:  "IP Address of machine",
-//			EnvVar: "GENERIC_IP_ADDRESS",
-//		},
+		mcnflag.StringFlag{
+			Name:   "idcfnative-ip-address",
+			Usage:  "IP Address of machine",
+			EnvVar: "GENERIC_IP_ADDRESS",
+		},
 //		mcnflag.StringFlag{
 //			Name:   "dummy-ssh-user",
 //			Usage:  "SSH user",
